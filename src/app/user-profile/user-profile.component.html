@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="card">
+    <img
+      class="User-picture"
+      src="https://randomuser.me/api/portraits/lego/2.jpg"
+      alt="Coucou"
+    />
+    <p>{{ user.quote }}</p>
+    <br />
+  </div>
+  <div>
+    <h2>{{ user.name }} {{ user.firstName }}</h2>
+    <input [(ngModel)]="user.quote" />
+
+    <br />
+
+    <div class="container-age" *ngIf="isAgeToggled">{{ user.age }} ans</div>
+    <br />
+
+    <div id="display">
+      <button type="button" (click)="toggleAge()">Affichez l'age</button>
+    </div>
+  </div>
+</div>

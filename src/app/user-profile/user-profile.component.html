@@ -11,12 +11,9 @@
   <div>
     <h2>{{ user.name }} {{ user.firstName }}</h2>
     <input [(ngModel)]="user.quote" />
-
     <br />
-
-    <div class="container-age" *ngIf="isAgeToggled">{{ user.age }} ans</div>
+    <div class="container-age" *ngIf="isAgeToggled === true">{{ user.age }} ans</div>
     <br />
-
     <div id="display">
       <button type="button" (click)="toggleAge()">Affichez l'age</button>
     </div>
